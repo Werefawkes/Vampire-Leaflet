@@ -1,6 +1,8 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+var imageSize = [14938, 21839];
+var imageScale = 0.001;
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+var imageBounds = [[(-imageSize[0] * imageScale) / 2, (-imageSize[1] * imageScale) / 2], [[(imageSize[0] * imageScale) / 2, (imageSize[1] * imageScale) / 2]]]
+
+var map = L.map('map').fitBounds(imageBounds).setMaxBounds(imageBounds).setZoom(10);
+
+L.imageOverlay('./london_map_large.jpg', imageBounds).addTo(map);
