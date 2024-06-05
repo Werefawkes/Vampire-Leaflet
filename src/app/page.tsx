@@ -1,11 +1,20 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Test from "./components/test";
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-			<p>test</p>
-    </main>
-  );
+export default async function Page() {
+    const Map = useMemo(() => dynamic(
+        () => import('./components/map/'),
+        {
+            loading: () => <p>A map is loading</p>,
+            ssr: false
+        }
+    ), [])
+
+    return (
+        <>
+            <div className="map">
+                <Map posix={[4.79029, -75.69003]} />
+            </div>
+        </>
+    )
 }
