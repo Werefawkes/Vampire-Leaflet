@@ -1,6 +1,6 @@
 export default function Navbar() {
 	return (
-		<span id="navbar">
+		<span className="text-3xl">
 			Navbar
 		</span>
 	)
