@@ -1,9 +1,13 @@
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+import Navbar from "./components/Navbar";
+
+// Thanks to this article for helping me get Leaflet to work:
+// https://andresprieto-25116.medium.com/how-to-use-react-leaflet-in-nextjs-with-typescript-surviving-it-21a3379d4d18
 
 export default async function Page() {
     const Map = useMemo(() => dynamic(
-        () => import('./components/map/'),
+        () => import('./components/map'),
         {
             loading: () => <p>A map is loading</p>,
             ssr: false
@@ -12,8 +16,9 @@ export default async function Page() {
 
     return (
         <>
+			<Navbar></Navbar>
             <div className="map">
-                <Map posix={[4.79029, -75.69003]} />
+                <Map posix={[51.505, -0.09]} zoom={13} />
             </div>
         </>
     )

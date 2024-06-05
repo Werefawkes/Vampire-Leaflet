@@ -25,16 +25,13 @@ const Map = (Map: MapProps) => {
         <MapContainer
             center={posix}
             zoom={zoom}
-            scrollWheelZoom={false}
+            scrollWheelZoom={true}
             style={{ height: "100%", width: "100%" }}
         >
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://maps.nls.uk/projects/subscription-api/">National Library of Scotland</a>'
+                url="https://api.maptiler.com/tiles/uk-osgb63k1885/{z}/{x}/{y}.png?key=VLTPHr9mfRwVtty3KayI"
             />
-            <Marker position={posix} draggable={false}>
-                <Popup>Hey ! I study here</Popup>
-            </Marker>
         </MapContainer>
     )
 }
