@@ -15,11 +15,7 @@ export default async function Page() {
     ), [])
 
     return (
-        <>
-			<Navbar></Navbar>
-            <div className="map">
-                <Map posix={[51.505, -0.09]} zoom={13} />
-            </div>
-        </>
+        <div>
+        </div>
     )
 }
