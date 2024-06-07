@@ -4,13 +4,14 @@
 // https://andresprieto-25116.medium.com/how-to-use-react-leaflet-in-nextjs-with-typescript-surviving-it-21a3379d4d18
 
 import { MapContainer, TileLayer, Marker, Popup, Polygon, useMap, useMapEvents, Polyline, LayersControl, LayerGroup } from "react-leaflet";
-import { Control, control, icon, LatLng, LatLngExpression, LatLngTuple } from 'leaflet';
+import { Control, control, icon, LatLng, LatLngExpression, LatLngLiteral, LatLngTuple } from 'leaflet';
 import J from "../../data.json"
 
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
 import LondonMarker from "./LondonMarker";
+import LondonShape from "./LondonShape";
 
 interface MapProps {
     posix: LatLngExpression | LatLngTuple,
@@ -28,6 +29,10 @@ const scale = [0.017, 0.03]
 
 function ToLatLng(loc: number[]) {
     return new LatLng((loc[0] * scale[0]) + offset[0], (loc[1] * scale[1]) + offset[1] )
+}
+
+function OffsetAndScale(positions: LatLngLiteral[]) {
+    return positions.map((pos) => new LatLng((pos.lat * scale[0]) + offset[0], (pos.lng * scale[1]) + offset[1]))
 }
 
 const Map = (Map: MapProps) => {
@@ -49,6 +54,11 @@ const Map = (Map: MapProps) => {
                 <LayersControl.Overlay checked name="Markers">
                     <LayerGroup>
                         {ImportedData.markers.map((marker) => <LondonMarker key={marker.link} category={marker.type} tooltip={marker.link} position={ToLatLng(marker.loc)}/>)}
+                    </LayerGroup>
+                </LayersControl.Overlay>
+                <LayersControl.Overlay checked name="Domains">
+                    <LayerGroup>
+                        {ImportedData.shapes.map((shape) => <LondonShape positions={OffsetAndScale(shape.vertices)} color={shape.color}/>)}
                     </LayerGroup>
                 </LayersControl.Overlay>
             </LayersControl>

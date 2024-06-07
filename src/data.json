@@ -454,7 +454,7 @@
         },
         {
           "id": "ID_b98a6ad9abb8",
-          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
+          "type": "https://img.icons8.com/?size=100&id=OUDlovpYdzsu&format=png&color=00FF55",
           "loc": [
             -2.34765625,
             3.2158203125
@@ -508,7 +508,7 @@
         },
         {
           "id": "ID_4a5828d92bda",
-          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
+          "type": "https://img.icons8.com/?size=100&id=OUDlovpYdzsu&format=png&color=00FF55",
           "loc": [
             -2.3903049025040493,
             4.347947116934665
@@ -599,7 +599,7 @@
         },
         {
           "id": "ID_fbc858f94bdb",
-          "type": "default",
+          "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
           "loc": [
             -2.7680054027209726,
             3.945711081738216
@@ -31320,7 +31320,7 @@
       "maxZoom": null
     },
     {
-      "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
+      "type": "https://img.icons8.com/?size=100&id=OUDlovpYdzsu&format=png&color=00FF55",
       "iconName": "shopping-bag",
       "color": "#00ff55",
       "alpha": 1,
