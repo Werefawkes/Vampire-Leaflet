@@ -7,7 +7,7 @@
       "markers": [
         {
           "id": "ID_7b692b0ab8aa",
-          "type": "Religous Locations",
+          "type": "https://img.icons8.com/?size=100&id=101294&format=png&color=00FFEE",
           "loc": [
             -2.314453125,
             3.724609375
@@ -24,7 +24,7 @@
         },
         {
           "id": "ID_28995a8a5b58",
-          "type": "Royal Locations",
+          "type": "https://img.icons8.com/?size=100&id=12608&format=png&color=FBFF00",
           "loc": [
             -3.077019352507086,
             2.113033935967613
@@ -44,7 +44,7 @@
         },
         {
           "id": "ID_f8a9e9bbb918",
-          "type": "Kindred Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
           "loc": [
             -2.8548431396484375,
             0.447509765625
@@ -61,7 +61,7 @@
         },
         {
           "id": "ID_ca19a9c9984a",
-          "type": "Kindred Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
           "loc": [
             -1.0316009521484375,
             4.181884765625
@@ -78,7 +78,7 @@
         },
         {
           "id": "ID_6af86bdb8b1b",
-          "type": "Kindred Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
           "loc": [
             -3.9282535199102155,
             3.6836534416402715
@@ -95,7 +95,7 @@
         },
         {
           "id": "ID_5a382a79a979",
-          "type": "Cemeteries",
+          "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
           "loc": [
             -1.640625,
             6.17578125
@@ -115,7 +115,7 @@
         },
         {
           "id": "ID_7b09dbbbabc8",
-          "type": "Kindred Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
           "loc": [
             -1.6867802662661397,
             1.9890830890701663
@@ -149,7 +149,7 @@
         },
         {
           "id": "ID_2a59cb99fb1b",
-          "type": "Hospitals",
+          "type": "https://img.icons8.com/?size=100&id=JEQZj0KZHffx&format=png&color=FF7300",
           "loc": [
             -1.6435546875,
             2.9599609375
@@ -169,7 +169,7 @@
         },
         {
           "id": "ID_79ca0ad808e9",
-          "type": "Royal Locations",
+          "type": "https://img.icons8.com/?size=100&id=12608&format=png&color=FBFF00",
           "loc": [
             -2.46484375,
             3.0810546875
@@ -203,7 +203,7 @@
         },
         {
           "id": "ID_d9db4b9b9bea",
-          "type": "Religous Locations",
+          "type": "https://img.icons8.com/?size=100&id=101294&format=png&color=00FFEE",
           "loc": [
             -3.16015625,
             2.6611328125
@@ -223,7 +223,7 @@
         },
         {
           "id": "ID_e89ada78e979",
-          "type": "Royal Locations",
+          "type": "https://img.icons8.com/?size=100&id=12608&format=png&color=FBFF00",
           "loc": [
             -3.171875,
             2.7685546875
@@ -243,7 +243,7 @@
         },
         {
           "id": "ID_9a090aba0a49",
-          "type": "Prisons",
+          "type": "https://img.icons8.com/?size=100&id=2862&format=png&color=FEC086",
           "loc": [
             -2.6223243150808853,
             4.481910706339147
@@ -260,7 +260,7 @@
         },
         {
           "id": "ID_a9cafa097979",
-          "type": "Prisons",
+          "type": "https://img.icons8.com/?size=100&id=2862&format=png&color=FEC086",
           "loc": [
             -3.634765625,
             2.630859375
@@ -280,7 +280,7 @@
         },
         {
           "id": "ID_5babd89b983a",
-          "type": "Cemeteries",
+          "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
           "loc": [
             -3.8513336181640625,
             0.368408203125
@@ -297,7 +297,7 @@
         },
         {
           "id": "ID_fb39e9591b59",
-          "type": "Cemeteries",
+          "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
           "loc": [
             -0.6953125,
             2.37109375
@@ -314,7 +314,7 @@
         },
         {
           "id": "ID_59094b485bb8",
-          "type": "Cemeteries",
+          "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
           "loc": [
             -3.6377329329011063,
             5.446931923827624
@@ -334,7 +334,7 @@
         },
         {
           "id": "ID_1a18390a083b",
-          "type": "Cemeteries",
+          "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
           "loc": [
             -4.2536892305753256,
             3.027300906954907
@@ -354,7 +354,7 @@
         },
         {
           "id": "ID_da5af89b8b38",
-          "type": "Kindred Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
           "loc": [
             -4.2216796875,
             5.9716796875
@@ -374,7 +374,7 @@
         },
         {
           "id": "ID_484888c82b29",
-          "type": "Human Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=11FF00",
           "loc": [
             -1.5799417142136922,
             5.72314551022862
@@ -394,7 +394,7 @@
         },
         {
           "id": "ID_293a19b81b3a",
-          "type": "Human Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=11FF00",
           "loc": [
             -0.9501747372194234,
             0.6187184335382291
@@ -414,7 +414,7 @@
         },
         {
           "id": "ID_080bb9c8597a",
-          "type": "Human Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=11FF00",
           "loc": [
             -4.00233486695042,
             4.9138397020737035
@@ -434,7 +434,7 @@
         },
         {
           "id": "ID_aaeabb3a3828",
-          "type": "Human Manors",
+          "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=11FF00",
           "loc": [
             -0.9722718241315029,
             3.1819805153394642
@@ -454,7 +454,7 @@
         },
         {
           "id": "ID_b98a6ad9abb8",
-          "type": "Shops",
+          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
           "loc": [
             -2.34765625,
             3.2158203125
@@ -471,7 +471,7 @@
         },
         {
           "id": "ID_aada09f828e9",
-          "type": "Sex Work",
+          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=FF00AE",
           "loc": [
             -2.4375,
             2.8955078125
@@ -488,7 +488,7 @@
         },
         {
           "id": "ID_eba80a9bbba8",
-          "type": "Sex Work",
+          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=FF00AE",
           "loc": [
             -2.7578125,
             3.298828125
@@ -508,7 +508,7 @@
         },
         {
           "id": "ID_4a5828d92bda",
-          "type": "Shops",
+          "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
           "loc": [
             -2.3903049025040493,
             4.347947116934665
@@ -525,7 +525,7 @@
         },
         {
           "id": "ID_1b28a959e8eb",
-          "type": "Pubs",
+          "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
           "loc": [
             0.984375,
             -1.25
@@ -545,7 +545,7 @@
         },
         {
           "id": "ID_2ad8cb599b89",
-          "type": "Pubs",
+          "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
           "loc": [
             -2.918239698699389,
             3.3704962880581433
@@ -562,7 +562,7 @@
         },
         {
           "id": "ID_e809c80a5ab9",
-          "type": "Pubs",
+          "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
           "loc": [
             -2.4900654814049714,
             2.8588106192503
@@ -582,7 +582,7 @@
         },
         {
           "id": "ID_f83a88d898ea",
-          "type": "Police",
+          "type": "https://img.icons8.com/?size=100&id=d5vmdZii01gg&format=png&color=2A467E",
           "loc": [
             -3.0126953125,
             2.7607421875
@@ -616,7 +616,7 @@
         },
         {
           "id": "ID_7ac8ba3a19eb",
-          "type": "Pubs",
+          "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
           "loc": [
             -2.41015625,
             4.876953125
@@ -31192,7 +31192,7 @@
   },
   "markerIcons": [
     {
-      "type": "Kindred Manors",
+      "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=CC0000",
       "iconName": "house-user",
       "color": "#cc0000",
       "alpha": 1,
@@ -31208,7 +31208,7 @@
       "maxZoom": null
     },
     {
-      "type": "Cemeteries",
+      "type": "https://img.icons8.com/?size=100&id=83211&format=png&color=525252",
       "iconName": "skull",
       "color": "#525252",
       "alpha": 1,
@@ -31224,7 +31224,7 @@
       "maxZoom": null
     },
     {
-      "type": "Prisons",
+      "type": "https://img.icons8.com/?size=100&id=2862&format=png&color=FEC086",
       "iconName": "lock",
       "color": "#fec086",
       "alpha": 1,
@@ -31240,7 +31240,7 @@
       "maxZoom": null
     },
     {
-      "type": "Human Manors",
+      "type": "https://img.icons8.com/?size=100&id=bz9WdItnVWWG&format=png&color=11FF00",
       "iconName": "house-user",
       "color": "#11ff00",
       "alpha": 1,
@@ -31256,7 +31256,7 @@
       "maxZoom": null
     },
     {
-      "type": "Religous Locations",
+      "type": "https://img.icons8.com/?size=100&id=101294&format=png&color=00FFEE",
       "iconName": "church",
       "color": "#00ffee",
       "alpha": 1,
@@ -31272,7 +31272,7 @@
       "maxZoom": null
     },
     {
-      "type": "Hospitals",
+      "type": "https://img.icons8.com/?size=100&id=JEQZj0KZHffx&format=png&color=FF7300",
       "iconName": "hospital",
       "color": "#ff7300",
       "alpha": 1,
@@ -31288,7 +31288,7 @@
       "maxZoom": null
     },
     {
-      "type": "Royal Locations",
+      "type": "https://img.icons8.com/?size=100&id=12608&format=png&color=FBFF00",
       "iconName": "crown",
       "color": "#fbff00",
       "alpha": 1,
@@ -31304,7 +31304,7 @@
       "maxZoom": null
     },
     {
-      "type": "Sex Work",
+      "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=FF00AE",
       "iconName": "hand-holding-heart",
       "color": "#ff00ae",
       "alpha": 1,
@@ -31320,7 +31320,7 @@
       "maxZoom": null
     },
     {
-      "type": "Shops",
+      "type": "https://img.icons8.com/?size=100&id=36172&format=png&color=00FF55",
       "iconName": "shopping-bag",
       "color": "#00ff55",
       "alpha": 1,
@@ -31336,7 +31336,7 @@
       "maxZoom": null
     },
     {
-      "type": "Pubs",
+      "type": "https://img.icons8.com/?size=100&id=108394&format=png&color=FF4000",
       "iconName": "beer",
       "color": "#ff4000",
       "alpha": 1,
@@ -31352,7 +31352,7 @@
       "maxZoom": null
     },
     {
-      "type": "Police",
+      "type": "https://img.icons8.com/?size=100&id=d5vmdZii01gg&format=png&color=2A467E",
       "iconName": "user-lock",
       "color": "#2a467e",
       "alpha": 1,
