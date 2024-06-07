@@ -24,8 +24,8 @@ const defaults = {
 
 const ImportedData = J.mapMarkers[0]
 
-const offset = [51.553, -0.208]
-const scale = [0.017, 0.03]
+const offset = [51.553, -0.202]
+const scale = [0.017, 0.028]
 
 function ToLatLng(loc: number[]) {
     return new LatLng((loc[0] * scale[0]) + offset[0], (loc[1] * scale[1]) + offset[1] )
