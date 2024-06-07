@@ -1,7 +1,5 @@
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
-import Navbar from "./components/Navbar";
-
 
 export default async function Page() {
     const Map = useMemo(() => dynamic(
@@ -14,6 +12,7 @@ export default async function Page() {
 
     return (
         <div>
+            London Shadows
         </div>
     )
 }
