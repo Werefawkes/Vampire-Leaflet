@@ -26,7 +26,7 @@ export default function RootLayout({
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossOrigin=""></script>
       </head>
-      <body className={inter.className + " bg-black text-white h-screen"}>
+      <body className={inter.className + " flex flex-col bg-black text-white h-screen"}>
         <Navbar></Navbar>
         {children}
       </body>
