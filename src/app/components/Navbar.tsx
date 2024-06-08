@@ -8,7 +8,7 @@ export default function Navbar() {
 				["Map", "/map"],
 				["Wiki", "/wiki"]
 			].map(([title, url]) => (
-				<Link href={url} key={title} className="text-lg px-3 py-2 ml-3 my-2 rounded-md shadow-lg shadow-red-950">{title}</Link>				
+				<Link href={url} key={title} className="text-lg px-3 pt-1 pb-2 ml-3 my-2 rounded-md bg-red-950 shadow-lg transition hover:bg-red-900">{title}</Link>
 			))}
 		</div>
 		)

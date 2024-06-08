@@ -14,7 +14,7 @@ export default async function WikiLayout({
 				<li>
 					Characters
 					<ul className="list-disc list-inside indent-4">
-						{characters.map((character: CharacterSchema) => <li key={character._id}><Link href={"wiki/" + character._id}>{character.firstName} {character.lastName}</Link></li>)}
+						{characters.map((character: CharacterSchema) => <li className="px-1 rounded transition hover:bg-slate-700" key={character._id}><Link href={"/wiki/" + character._id}>{character.firstName} {character.lastName}</Link></li>)}
 					</ul>
 				</li>
 			</ul>
