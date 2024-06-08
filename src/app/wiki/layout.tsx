@@ -7,7 +7,6 @@ export default async function WikiLayout({
 	children: React.ReactNode
 }) {
 	const characters = await GetCharacters()
-	console.log(characters)
 
 	return (
 		<div className="p-3 mx-3 flex space-x-3">
