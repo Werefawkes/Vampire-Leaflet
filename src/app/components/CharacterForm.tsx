@@ -18,7 +18,7 @@ export default function CharacterForm({
 	const [creatureType, setCreatureType] = useState('Human')
 
 	return (
-		<div>
+		<div className="m-2">
 			<form action={onSubmit}>
 			<div>
 					<fieldset>

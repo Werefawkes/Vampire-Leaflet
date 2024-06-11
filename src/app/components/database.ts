@@ -54,7 +54,7 @@ export async function GetCharacterForID(_id:string): Promise<CharacterSchema> {
 	return res.json()
 }
 
-async function PostCharacter(data: CharacterFormProps) {	
+async function PostCharacter(data: CharacterFormProps): Promise<CharacterSchema> {	
 	const res = await fetch(URL + 'characters/', {
 		method: "POST",
 		headers: {
@@ -62,7 +62,7 @@ async function PostCharacter(data: CharacterFormProps) {
 		body: JSON.stringify(data)
 	})
 
-	console.log(res)
+	return await res.json()
 }
 
 async function PutCharacter(data: CharacterFormProps, id: string) {
@@ -72,18 +72,20 @@ async function PutCharacter(data: CharacterFormProps, id: string) {
 			'Content-Type': 'application/json'},
 		body: JSON.stringify(data)
 	})
+}
 
-	console.log(res)
-
+async function DelCharacter(id: string) {
+	const res = await fetch(URL + 'characters/' + id, {
+		method: "DELETE"
+	})
 }
 
 export async function NewCharacter(formData: FormData) {
 	'use server'
 
-	await PostCharacter(await CharacterPropsFromForm(formData))
-	
+	const char = await PostCharacter(await CharacterPropsFromForm(formData))
 	revalidatePath('/wiki', 'layout')
-	redirect('/wiki')
+	redirect('/wiki/' + char._id)
 }
 
 export async function EditCharacter(id: string, formData: FormData) {
@@ -93,6 +95,15 @@ export async function EditCharacter(id: string, formData: FormData) {
 	
 	revalidatePath('/wiki', 'layout')
 	redirect('/wiki/' + id)
+}
+
+export async function DeleteCharacter(id: string, formData: FormData) {
+	'use server'
+
+	await DelCharacter(id)
+
+	revalidatePath('/wiki', 'layout')
+	redirect('/wiki/')
 }
 
 export async function CharacterPropsFromForm(formData: FormData): Promise<CharacterFormProps> {
