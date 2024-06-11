@@ -1,4 +1,4 @@
-import NavigationButton from "@/app/components/NavigationButton"
+import NavButton from "@/app/components/NavButton"
 import { GetCharacterForID } from "@/app/components/database"
 import Link from "next/link"
 
@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 			<div className="text-2xl">Biography</div>
 			<div className="indent-4">{character.bio}</div>
 
-			<NavigationButton url={params.id + "/edit"}>Edit</NavigationButton>
+			<NavButton url={params.id + "/edit"}>Edit</NavButton>
 		</div>
 	)
 }

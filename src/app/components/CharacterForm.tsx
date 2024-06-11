@@ -2,9 +2,18 @@
 
 import { CharacterFormProps } from "@/app/components/database"
 import { useState } from "react"
+import NavButton from "./NavButton"
 
 
-export default function CharacterForm({ onSubmit, characterValues }: { onSubmit: (formData: FormData) => void, characterValues: CharacterFormProps }) {
+export default function CharacterForm({ 
+	onSubmit, 
+	characterValues,
+	characterId = ""
+}: { 
+	onSubmit: (formData: FormData) => void, 
+	characterValues: CharacterFormProps,
+	characterId?: string
+}) {
 
 	const [creatureType, setCreatureType] = useState('Human')
 
@@ -53,7 +62,8 @@ export default function CharacterForm({ onSubmit, characterValues }: { onSubmit:
 					<label htmlFor="bio">Biography</label>
 				</div>
 				<div>
-					<button type="submit">Submit</button>
+					<button type="submit" className="mx-1 my-2 text-lg px-3 pt-1 pb-2 rounded-md bg-red-950 shadow-lg transition hover:bg-red-900">Submit</button>
+					<NavButton className="mx-1 my-2 inline-block" url={"/wiki/" + characterId}>Cancel</NavButton>
 				</div>
 			</form>
 		</div>
