@@ -1,3 +1,6 @@
+import { revalidatePath } from "next/cache"
+import { RedirectType, redirect } from "next/navigation"
+
 export interface CharacterSchema {
 	_id: string,
 	firstName: string,
@@ -77,13 +80,19 @@ async function PutCharacter(data: CharacterFormProps, id: string) {
 export async function NewCharacter(formData: FormData) {
 	'use server'
 
-	PostCharacter(await CharacterPropsFromForm(formData))
+	await PostCharacter(await CharacterPropsFromForm(formData))
+	
+	revalidatePath('/wiki', 'layout')
+	redirect('/wiki')
 }
 
-export async function EditCharacter(formData: FormData) {
+export async function EditCharacter(id: string, formData: FormData) {
 	'use server'
 
-	PutCharacter(await CharacterPropsFromForm(formData))
+	await PutCharacter(await CharacterPropsFromForm(formData), id)
+	
+	revalidatePath('/wiki', 'layout')
+	redirect('/wiki/' + id)
 }
 
 export async function CharacterPropsFromForm(formData: FormData): Promise<CharacterFormProps> {
