@@ -1,7 +1,9 @@
-import { CharacterForm, PostCharacter } from "@/app/components/database"
+import CharacterForm from "@/app/components/CharacterForm"
+import { CharacterDefaults, CharacterFormProps, PostCharacter } from "@/app/components/database"
+import { useState } from "react"
 
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page() {
 	async function createCharacter(formData: FormData) {
 		'use server'
 
@@ -15,7 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 			creature: formData.get('creature')?.toString()
 		}
 
-		const data: CharacterForm = {
+		const data: CharacterFormProps = {
 			firstName: raw.firstName ? raw.firstName : "FirstName",
 			lastName: raw.lastName ? raw.lastName.toString() : "LastName",
 			apparentAge: raw.apparentAge ? Number.parseInt(raw.apparentAge) : 0,
@@ -27,44 +29,11 @@ export default async function Page({ params }: { params: { id: string } }) {
 
 		PostCharacter(data)
 	}
-
+	// const [isKindred, setIsKindred] = useState(true)
 
 	return (
 		<div>
-			<form action={createCharacter}>
-				<div>
-					<input type="text" name="firstName" className="bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<input type="text" name="lastName" className="bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<input type="number" name="apparentAge" className="bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<input type="number" name="trueAge" className="bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<input type="text" name="generation" className="bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<input type="text" name="bio" className="form-textarea bg-red-950 rounded m-1"/>
-				</div>
-				<div>
-					<fieldset>
-						<legend>Creature</legend>
-						<input type="radio" id="human" name="creature" value={"Human"} className="bg-red-950 rounded m-1"/>
-						<label htmlFor="human">Human</label>
-
-						<input type="radio" id="kindred" name="creature" value={"Kindred"} className="bg-red-950 rounded m-1"/>
-						<label htmlFor="kindred">Kindred</label>
-
-					</fieldset>
-				</div>
-				<div>
-					<button type="submit">Submit</button>
-				</div>
-			</form>
+			<CharacterForm onSubmit={createCharacter} characterValues={CharacterDefaults}/>
 		</div>
 	)
 }

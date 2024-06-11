@@ -9,7 +9,7 @@ export interface CharacterSchema {
 	creature: string
 }
 
-export interface CharacterForm {
+export interface CharacterFormProps {
 	firstName: string,
 	lastName: string,
 	apparentAge: number,
@@ -17,6 +17,16 @@ export interface CharacterForm {
 	generation: string,
 	bio: string,
 	creature: string
+}
+
+export const CharacterDefaults: CharacterFormProps = {
+	firstName: "",
+	lastName: "",
+	apparentAge: 0,
+	trueAge: 0,
+	generation: "",
+	bio: "",
+	creature: "Human"
 }
 
 const URL = 'http://localhost:3001/'
@@ -41,7 +51,7 @@ export async function GetCharacterForID(_id:string): Promise<CharacterSchema> {
 	return res.json()
 }
 
-export async function PostCharacter(data: CharacterForm) {
+export async function PostCharacter(data: CharacterFormProps) {
 	const res = await fetch(URL + 'characters/', {
 		method: "POST",
 		headers: {
