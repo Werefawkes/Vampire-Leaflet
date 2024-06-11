@@ -1,6 +1,6 @@
 'use client'
 
-import { CharacterFormProps, PostCharacter } from "@/app/components/database"
+import { CharacterFormProps } from "@/app/components/database"
 import { useState } from "react"
 
 
@@ -13,7 +13,6 @@ export default function CharacterForm({ onSubmit, characterValues }: { onSubmit:
 			<form action={onSubmit}>
 			<div>
 					<fieldset>
-						<legend>Creature</legend>
 						<input type="radio" required id="human" name="creature" value={"Human"} defaultChecked onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
 						<label htmlFor="human">Human</label>
 
@@ -27,30 +26,30 @@ export default function CharacterForm({ onSubmit, characterValues }: { onSubmit:
 					<label htmlFor="firstName">First Name</label>
 				</div>
 				<div>
-					<input type="text" required name="lastName" className="bg-red-950 rounded m-1"/>
+					<input type="text" required name="lastName" defaultValue={characterValues.lastName} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="lastName">Last Name</label>
 				</div>
 				{
 					creatureType == "Kindred" ? 
 					<>
 						<div>
-							<input type="text" required name="generation" className="bg-red-950 rounded m-1"/>
+							<input type="text" required name="generation" defaultValue={characterValues.generation} className="bg-red-950 rounded m-1"/>
 							<label htmlFor="generation">Generation</label>
 						</div>
 
 						<div>
-							<input type="number" min={1} required name="apparentAge" className="bg-red-950 rounded m-1"/>
+							<input type="number" min={1} required name="apparentAge" defaultValue={characterValues.apparentAge} className="bg-red-950 rounded m-1"/>
 							<label htmlFor="apparentAge">Apparent Age</label>
 						</div> 
 					</>: 
 					<></>
 					}
 				<div>
-					<input type="number" min={1} required name="trueAge" className="bg-red-950 rounded m-1"/>
+					<input type="number" min={1} required name="trueAge" defaultValue={characterValues.trueAge} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="trueAge">{creatureType == "Kindred" ? "True Age" : "Age"}</label>
 				</div>
 				<div>
-					<input type="text" required name="bio" className="form-textarea bg-red-950 rounded m-1"/>
+					<input type="text" required name="bio" defaultValue={characterValues.bio} className="form-textarea bg-red-950 rounded m-1"/>
 					<label htmlFor="bio">Biography</label>
 				</div>
 				<div>

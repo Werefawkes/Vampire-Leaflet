@@ -1,4 +1,5 @@
 import { GetCharacterForID } from "@/app/components/database"
+import Link from "next/link"
 
 
 export default async function Page({ params }: { params: { id: string } }) {
@@ -11,6 +12,8 @@ export default async function Page({ params }: { params: { id: string } }) {
 			<div className="font-extralight">Estimated Age: {character.trueAge}. Appears {character.apparentAge}.</div>
 			<div className="text-2xl">Biography</div>
 			<div className="indent-4">{character.bio}</div>
+
+			<Link href={params.id + "/edit"}>Edit</Link>
 		</div>
 	)
 }

@@ -1,4 +1,5 @@
-import { GetCharacterForID } from "@/app/components/database"
+import CharacterForm from "@/app/components/CharacterForm"
+import { EditCharacter, GetCharacterForID } from "@/app/components/database"
 
 
 export default async function Page({ params }: { params: { id: string } }) {
@@ -6,11 +7,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
 	return (
 		<div className="px-4">
-			<div className="text-3xl">{character.firstName} {character.lastName}</div>
-			<div className="font-extralight">{character.generation ? character.generation : "Unknown"} Generation Kindred</div>
-			<div className="font-extralight">Estimated Age: {character.trueAge}. Appears {character.apparentAge}.</div>
-			<div className="text-2xl">Biography</div>
-			<div className="indent-4">{character.bio}</div>
+			<CharacterForm onSubmit={EditCharacter} characterValues={character} />
 		</div>
 	)
 }
