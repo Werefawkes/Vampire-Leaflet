@@ -27,7 +27,7 @@ export const CharacterDefaults: CharacterFormProps = {
 	lastName: "",
 	apparentAge: 0,
 	trueAge: 0,
-	generation: "",
+	generation: "Unknown",
 	bio: "",
 	creature: "Human"
 }
