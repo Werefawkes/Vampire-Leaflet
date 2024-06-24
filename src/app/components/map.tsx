@@ -3,8 +3,8 @@
 // Thanks to this article for helping me get Leaflet to work:
 // https://andresprieto-25116.medium.com/how-to-use-react-leaflet-in-nextjs-with-typescript-surviving-it-21a3379d4d18
 
-import { MapContainer, TileLayer, Marker, Popup, Polygon, useMap, useMapEvents, Polyline, LayersControl, LayerGroup } from "react-leaflet";
-import { Control, control, icon, LatLng, LatLngExpression, LatLngLiteral, LatLngTuple } from 'leaflet';
+import { MapContainer, TileLayer, LayersControl, LayerGroup } from "react-leaflet";
+import { LatLng, LatLngExpression, LatLngLiteral, LatLngTuple } from 'leaflet';
 import J from "../../data.json"
 
 import "leaflet/dist/leaflet.css";
