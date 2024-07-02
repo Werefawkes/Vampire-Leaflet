@@ -32,16 +32,17 @@ export const CharacterDefaults: CharacterFormProps = {
 	creature: "Human"
 }
 
+// const URL = 'http://lsvamp-env.eba-igqbv5nc.us-east-1.elasticbeanstalk.com/'
 const URL = 'http://localhost:3001/'
 
 export async function GetCharacters(): Promise<CharacterSchema[]> {
-	const res = await fetch(URL + 'characters')
-
-	if (!res.ok) {
-		throw new Error("Failed to fetch data")
+	try {
+		const res = await fetch(URL + 'characters')
+		return res.json()
+	} catch (error) {
+		console.error("Failed to fetch data:", error)
+		return []
 	}
-
-	return res.json()
 }
 
 export async function GetCharacterForID(_id:string): Promise<CharacterSchema> {
