@@ -8,12 +8,12 @@ export default function NavButton({
 }: {
 	url: string,
 	className?: string,
-	disabled: boolean,
-	children: React.ReactNode
+	disabled?: boolean,
+	children?: React.ReactNode
 }) {
 	if (disabled) {
 		return (
-			<div className={className + " text-lg text-zinc-400 px-3 pt-1 pb-2 rounded-md bg-zinc-800 shadow-lg "}>{children}</div>
+			<div className={className + " inline text-lg text-zinc-400 px-3 pt-1 pb-2 rounded-md bg-zinc-800 shadow-lg "}>{children}</div>
 		)
 	}
 	
