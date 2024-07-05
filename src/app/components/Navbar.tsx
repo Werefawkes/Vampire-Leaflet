@@ -9,7 +9,7 @@ export default function Navbar() {
 				["Map", "/map"],
 				["Wiki", "/wiki"]
 			].map(([title, url]) => (
-				<NavButton className="ml-3 my-2 " key={title} url={url}>{title}</NavButton>
+				<NavButton className="ml-3 my-2 " disabled={title == "Wiki"} key={title} url={url}>{title}</NavButton>
 			))}
 		</div>
 		)

@@ -37,6 +37,7 @@ const URL = 'http://lsvamp-env.eba-igqbv5nc.us-east-1.elasticbeanstalk.com/'
 export async function GetCharacters(): Promise<CharacterSchema[]> {
 	try {
 		const res = await fetch(URL + 'characters')
+		console.log(res)
 		return res.json()
 	} catch (error) {
 		console.error("Failed to fetch data:", error)
