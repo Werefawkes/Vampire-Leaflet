@@ -10,7 +10,14 @@ export async function GetCharacters(): Promise<CharacterSchema[]> {
 	const res = await fetch(URL + 'characters', {
 		cache: 'no-store'
 	})
-	return res.json()
+	if (res.status == 504) {
+		console.error("ERROR: Gateway timed out")
+		return []
+	}
+	else {
+		const parsed = await res.json()
+		return parsed			
+	}
 }
 
 export async function GetCharacterForID(_id:string): Promise<CharacterSchema> {
