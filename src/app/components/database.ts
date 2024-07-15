@@ -1,47 +1,16 @@
+'use server'
+
 import { revalidatePath } from "next/cache"
 import { RedirectType, redirect } from "next/navigation"
-
-export interface CharacterSchema {
-	_id: string,
-	firstName: string,
-	lastName: string,
-	apparentAge: number,
-	trueAge: number,
-	generation: string,
-	bio: string,
-	creature: string
-}
-
-export interface CharacterFormProps {
-	firstName: string,
-	lastName: string,
-	apparentAge: number,
-	trueAge: number,
-	generation: string,
-	bio: string,
-	creature: string
-}
-
-export const CharacterDefaults: CharacterFormProps = {
-	firstName: "",
-	lastName: "",
-	apparentAge: 0,
-	trueAge: 0,
-	generation: "Unknown",
-	bio: "",
-	creature: "Human"
-}
+import { CharacterSchema, CharacterDefaults, CharacterFormProps } from "./Schemas"
 
 const URL = 'http://lsvamp-env.eba-igqbv5nc.us-east-1.elasticbeanstalk.com/'
 
 export async function GetCharacters(): Promise<CharacterSchema[]> {
-	try {
-		const res = await fetch(URL + 'characters')
-		return res.json()
-	} catch (error) {
-		console.error("Failed to fetch data:", error)
-		return []
-	}
+	const res = await fetch(URL + 'characters', {
+		cache: 'no-store'
+	})
+	return res.json()
 }
 
 export async function GetCharacterForID(_id:string): Promise<CharacterSchema> {

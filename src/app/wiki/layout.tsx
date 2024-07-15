@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { GetCharacters, CharacterSchema } from "../components/database"
 import NavButton from "../components/NavButton"
 import { Suspense } from "react"
 import Loading from "../components/Loading"

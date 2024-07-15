@@ -1,5 +1,6 @@
 import CharacterForm from "@/app/components/CharacterForm"
-import { CharacterDefaults, NewCharacter } from "@/app/components/database"
+import { NewCharacter } from "@/app/components/database"
+import { CharacterDefaults } from "@/app/components/Schemas"
 
 export default async function Page() {
 

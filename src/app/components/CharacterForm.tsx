@@ -1,6 +1,6 @@
 'use client'
 
-import { CharacterFormProps } from "@/app/components/database"
+import { CharacterFormProps } from "./Schemas"
 import { useState } from "react"
 import NavButton from "./NavButton"
 
