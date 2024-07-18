@@ -9,12 +9,11 @@ export default async function Page({ params }: { params: { id: string } }) {
 		<div className="px-4">
 			<div className="m-4">
 				<div>
-					<span className="text-3xl">Lord {character.firstName} {character.lastName}</span>
-					{/* <span className="font-extralight mx-3">She / Her</span> */}
+					<span className="text-3xl">{character.title} {character.firstName} {character.lastName}</span>
 				</div>
 				{ isHuman ? "" : <div className="font-light">{character.generation ? character.generation : "Unknown"} Generation Kindred</div>}
 				<div className="font-extralight">Estimated {character.trueAge} years old{isHuman ? "." : `; appears ${character.apparentAge}`}</div>
-				<div className="text-2xl">Biography</div>
+				<div className="text-2xl">Notes</div>
 				<div className="indent-4">{character.bio}</div>
 			</div>
 			<NavButton url={params.id + "/edit"}>Edit</NavButton>

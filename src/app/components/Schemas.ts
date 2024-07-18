@@ -2,9 +2,10 @@ export interface CharacterSchema {
 	_id: string,
 	firstName: string,
 	lastName: string,
+	title: string,
 	apparentAge: number,
 	trueAge: number,
-	generation: string,
+	generation: number,
 	bio: string,
 	creature: string
 }
@@ -12,9 +13,10 @@ export interface CharacterSchema {
 export interface CharacterFormProps {
 	firstName: string,
 	lastName: string,
+	title: string,
 	apparentAge: number,
 	trueAge: number,
-	generation: string,
+	generation: number,
 	bio: string,
 	creature: string
 }
@@ -22,9 +24,10 @@ export interface CharacterFormProps {
 export const CharacterDefaults: CharacterFormProps = {
 	firstName: "",
 	lastName: "",
+	title: "",
 	apparentAge: 0,
 	trueAge: 0,
-	generation: "Unknown",
+	generation: 0,
 	bio: "",
 	creature: "Human"
 }

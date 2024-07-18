@@ -20,7 +20,7 @@ export default function CharacterForm({
 	return (
 		<div className="m-2">
 			<form action={onSubmit}>
-			<div>
+				<div>
 					<fieldset>
 						<input type="radio" required id="human" name="creature" value={"Human"} defaultChecked onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
 						<label htmlFor="human">Human</label>
@@ -31,6 +31,11 @@ export default function CharacterForm({
 				</div>
 
 				<div>
+					<input type="text" name="title" defaultValue={characterValues.title} className="bg-red-950 rounded m-1"/>
+					<label htmlFor="title">Title</label>
+				</div>
+
+				<div>
 					<input type="text" required name="firstName" defaultValue={characterValues.firstName} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="firstName">First Name</label>
 				</div>
@@ -38,11 +43,12 @@ export default function CharacterForm({
 					<input type="text" required name="lastName" defaultValue={characterValues.lastName} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="lastName">Last Name</label>
 				</div>
+
 				{
 					creatureType == "Kindred" ? 
 					<>
 						<div>
-							<input type="text" required name="generation" defaultValue={characterValues.generation} className="bg-red-950 rounded m-1"/>
+							<input type="number" min={0} name="generation" defaultValue={characterValues.generation} className="bg-red-950 rounded m-1"/>
 							<label htmlFor="generation">Generation</label>
 						</div>
 
@@ -52,14 +58,15 @@ export default function CharacterForm({
 						</div> 
 					</>: 
 					<></>
-					}
+				}
+
 				<div>
-					<input type="number" min={1} required name="trueAge" defaultValue={characterValues.trueAge} className="bg-red-950 rounded m-1"/>
+					<input type="number" min={1} name="trueAge" defaultValue={characterValues.trueAge} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="trueAge">{creatureType == "Kindred" ? "True Age" : "Age"}</label>
 				</div>
 				<div>
-					<input type="text" required name="bio" defaultValue={characterValues.bio} className="form-textarea bg-red-950 rounded m-1"/>
-					<label htmlFor="bio">Biography</label>
+					<input type="text" name="bio" defaultValue={characterValues.bio} className="form-textarea bg-red-950 rounded m-1"/>
+					<label htmlFor="bio">Notes</label>
 				</div>
 				<div>
 					<button type="submit" className="mx-1 my-2 text-lg px-3 pt-1 pb-2 rounded-md bg-red-950 shadow-lg transition hover:bg-red-900">Submit</button>
