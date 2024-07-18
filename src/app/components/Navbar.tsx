@@ -1,4 +1,5 @@
 import Link from "next/link"
+import NavButton from "./NavButton"
 
 export default function Navbar() {
 	return (
@@ -8,7 +9,7 @@ export default function Navbar() {
 				["Map", "/map"],
 				["Wiki", "/wiki"]
 			].map(([title, url]) => (
-				<Link href={url} className="px-3 py-2 ml-3 my-2 rounded-md shadow-lg shadow-red-950">{title}</Link>				
+				<NavButton className="ml-3 my-2 " disabled={title == "Wiki"} key={title} url={url}>{title}</NavButton>
 			))}
 		</div>
 		)
