@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -825,8 +825,22 @@ select {
   margin-bottom: 0.25rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .inline-block {
@@ -902,41 +916,17 @@ select {
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
-.bg-stone-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(28 25 23 / var(--tw-bg-opacity));
-}
-
-.bg-stone-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 9 11 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-1 {
@@ -986,11 +976,6 @@ select {
   line-height: 1.75rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .font-extralight {
   font-weight: 200;
 }
@@ -1002,11 +987,6 @@ select {
 .text-slate-50 {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-zinc-400 {
