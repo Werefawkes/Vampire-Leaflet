@@ -15,17 +15,17 @@ export default function CharacterForm({
 	characterId?: string
 }) {
 
-	const [creatureType, setCreatureType] = useState('Human')
+	const [creatureType, setCreatureType] = useState(characterValues.creature)
 
 	return (
 		<div className="m-2">
 			<form action={onSubmit}>
 				<div>
 					<fieldset>
-						<input type="radio" required id="human" name="creature" value={"Human"} defaultChecked onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
+						<input type="radio" required id="human" name="creature" value={"Human"} defaultChecked={characterValues.creature == "Human"} onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
 						<label htmlFor="human">Human</label>
 
-						<input type="radio" required id="kindred" name="creature" value={"Kindred"} onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
+						<input type="radio" required id="kindred" name="creature" value={"Kindred"} defaultChecked={characterValues.creature == "Kindred"} onChange={e => setCreatureType(e.target.value)} className="bg-red-950 rounded m-1"/>
 						<label htmlFor="kindred">Kindred</label>
 					</fieldset>
 				</div>
@@ -61,7 +61,7 @@ export default function CharacterForm({
 				}
 
 				<div>
-					<input type="number" min={1} name="trueAge" defaultValue={characterValues.trueAge} className="bg-red-950 rounded m-1"/>
+					<input type="number" min={0} name="trueAge" defaultValue={characterValues.trueAge} className="bg-red-950 rounded m-1"/>
 					<label htmlFor="trueAge">{creatureType == "Kindred" ? "True Age" : "Age"}</label>
 				</div>
 				<div>

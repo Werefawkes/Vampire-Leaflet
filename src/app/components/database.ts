@@ -4,12 +4,13 @@ import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 import { CharacterSchema, CharacterDefaults, CharacterFormProps } from "./Schemas"
 
-const URL = 'http://lsvamp-env.eba-igqbv5nc.us-east-1.elasticbeanstalk.com/'
+const URL = process.env.DB_URL
 
 export async function GetCharacters(): Promise<CharacterSchema[]> {
 	const res = await fetch(URL + 'characters', {
 		cache: 'no-store'
 	})
+	
 	if (res.status == 504) {
 		console.error("ERROR: Gateway timed out")
 		return []

@@ -5,13 +5,30 @@ export default async function Page({ params }: { params: { id: string } }) {
 	const character = await GetCharacterForID(params.id)
 	const isHuman = character.creature == "Human"
 
+	var gen = ""
+
+	if (!isHuman) {
+		if (!character.generation || character.generation < 1) {
+			gen = "Unknown"
+		}
+		else {
+			let suffix = "th"
+			if (character.generation == 1) suffix = "st"
+			else if (character.generation == 2) suffix = "nd"
+			else if (character.generation == 3) suffix = "rd"
+			gen = character.generation + suffix
+		}
+	}
+
 	return (
 		<div className="px-4">
 			<div className="m-4">
 				<div>
 					<span className="text-3xl">{character.title} {character.firstName} {character.lastName}</span>
 				</div>
-				{ isHuman ? "" : <div className="font-light">{character.generation ? character.generation : "Unknown"} Generation Kindred</div>}
+				<div className="font-light">
+					{ isHuman ? "Human" : gen + " Generation Kindred"}
+				</div>
 				<div className="font-extralight">Estimated {character.trueAge} years old{isHuman ? "." : `; appears ${character.apparentAge}`}</div>
 				<div className="text-2xl">Notes</div>
 				<div className="indent-4">{character.bio}</div>
