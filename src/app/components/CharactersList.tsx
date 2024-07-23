@@ -1,4 +1,5 @@
-import { GetCharacters, CharacterSchema } from "./database"
+import { GetCharacters } from "./database"
+import { CharacterSchema } from "./Schemas"
 import Link from "next/link"
 
 export default async function CharactersList() {

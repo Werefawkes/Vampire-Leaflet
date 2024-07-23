@@ -1,4 +1,3 @@
-import Map from "../components/map"
 import dynamic from "next/dynamic"
 
 const DynamicMap = dynamic(() => import("../components/map"), {

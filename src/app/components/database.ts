@@ -1,47 +1,23 @@
+'use server'
+
 import { revalidatePath } from "next/cache"
-import { RedirectType, redirect } from "next/navigation"
+import { redirect } from "next/navigation"
+import { CharacterSchema, CharacterDefaults, CharacterFormProps } from "./Schemas"
 
-export interface CharacterSchema {
-	_id: string,
-	firstName: string,
-	lastName: string,
-	apparentAge: number,
-	trueAge: number,
-	generation: string,
-	bio: string,
-	creature: string
-}
-
-export interface CharacterFormProps {
-	firstName: string,
-	lastName: string,
-	apparentAge: number,
-	trueAge: number,
-	generation: string,
-	bio: string,
-	creature: string
-}
-
-export const CharacterDefaults: CharacterFormProps = {
-	firstName: "",
-	lastName: "",
-	apparentAge: 0,
-	trueAge: 0,
-	generation: "Unknown",
-	bio: "",
-	creature: "Human"
-}
-
-const URL = 'http://lsvamp-env.eba-igqbv5nc.us-east-1.elasticbeanstalk.com/'
+const URL = process.env.DB_URL
 
 export async function GetCharacters(): Promise<CharacterSchema[]> {
-	try {
-		const res = await fetch(URL + 'characters')
-		console.log(res)
-		return res.json()
-	} catch (error) {
-		console.error("Failed to fetch data:", error)
+	const res = await fetch(URL + 'characters', {
+		cache: 'no-store'
+	})
+	
+	if (res.status == 504) {
+		console.error("ERROR: Gateway timed out")
 		return []
+	}
+	else {
+		const parsed = await res.json()
+		return parsed			
 	}
 }
 
@@ -111,6 +87,7 @@ export async function CharacterPropsFromForm(formData: FormData): Promise<Charac
 	const raw = {
 		firstName: formData.get('firstName')?.toString(),
 		lastName: formData.get('lastName')?.toString(),
+		title: formData.get('title')?.toString(),
 		apparentAge: formData.get('apparentAge')?.toString(),
 		trueAge: formData.get('trueAge')?.toString(),
 		generation: formData.get('generation')?.toString(),
@@ -119,13 +96,14 @@ export async function CharacterPropsFromForm(formData: FormData): Promise<Charac
 	}
 
 	const data: CharacterFormProps = {
-		firstName: raw.firstName ? raw.firstName : "FirstName",
-		lastName: raw.lastName ? raw.lastName.toString() : "LastName",
-		apparentAge: raw.apparentAge ? Number.parseInt(raw.apparentAge) : 0,
-		trueAge: raw.trueAge ? Number.parseInt(raw.trueAge) : 0,
-		generation: raw.generation ? raw.generation : "Generation",
-		bio: raw.bio ? raw.bio : "Bio",
-		creature: raw.creature ? raw.creature : "Creature"
+		firstName: raw.firstName ? raw.firstName : CharacterDefaults.firstName,
+		lastName: raw.lastName ? raw.lastName.toString() : CharacterDefaults.lastName,
+		title: raw.title ? raw.title : CharacterDefaults.title,
+		apparentAge: raw.apparentAge ? Number.parseInt(raw.apparentAge) : CharacterDefaults.apparentAge,
+		trueAge: raw.trueAge ? Number.parseInt(raw.trueAge) : CharacterDefaults.trueAge,
+		generation: raw.generation ? Number.parseInt(raw.generation) : CharacterDefaults.generation,
+		bio: raw.bio ? raw.bio : CharacterDefaults.bio,
+		creature: raw.creature ? raw.creature : CharacterDefaults.creature
 	}
 
 	return data
