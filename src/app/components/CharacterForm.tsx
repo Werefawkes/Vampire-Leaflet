@@ -68,6 +68,7 @@ export default function CharacterForm({
 					<input type="text" name="bio" defaultValue={characterValues.bio} className="form-textarea bg-red-950 rounded m-1"/>
 					<label htmlFor="bio">Notes</label>
 				</div>
+
 				<div>
 					<button type="submit" className="mx-1 my-2 text-lg px-3 pt-1 pb-2 rounded-md bg-red-950 shadow-lg transition hover:bg-red-900">Submit</button>
 					<NavButton className="mx-1 my-2 inline-block" url={"/wiki/" + characterId}>Cancel</NavButton>

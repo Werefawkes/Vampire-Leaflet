@@ -20,6 +20,18 @@ export default async function Page({ params }: { params: { id: string } }) {
 		}
 	}
 
+	let age = ""
+	if (character.trueAge > 0) {
+		age += "Estimated " + character.trueAge + " years old"
+	}
+	else {
+		age += "Unknown age"
+	}
+
+	if (!isHuman) {
+		age += "; appears " + character.apparentAge
+	}
+
 	return (
 		<div className="px-4">
 			<div className="m-4">
@@ -29,7 +41,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 				<div className="font-light">
 					{ isHuman ? "Human" : gen + " Generation Kindred"}
 				</div>
-				<div className="font-extralight">Estimated {character.trueAge} years old{isHuman ? "." : `; appears ${character.apparentAge}`}</div>
+				<div className="font-extralight">{age}</div>
 				<div className="text-2xl">Notes</div>
 				<div className="indent-4">{character.bio}</div>
 			</div>
